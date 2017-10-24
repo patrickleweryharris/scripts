@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Command line wrapper for gitcheck.sh
+
+function goto(){ # Only search in the dir where I keep git repos
+  cd /Users/patrickharris/repos
+}
+goto
+
+gitcheck.sh
+
+function comeback(){
+  cd -
+}
+comeback

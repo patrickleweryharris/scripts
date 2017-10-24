@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Find git repos on my computer that haven't bee updated
+# Adapted from https://astrofloyd.wordpress.com/2013/02/10/gitcheck-check-all-your-git-repositories-for-changes/
+
 # Initialise counters:
 let count_all=0
 let count_changed=0

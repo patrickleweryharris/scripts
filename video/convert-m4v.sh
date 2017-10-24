@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Convert m4v to mp4 format
+
 for i in *.m4v;
   do name=`echo $i | cut -d'.' -f1`;
   echo $name;

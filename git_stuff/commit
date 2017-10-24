@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# Commit to git, the lazy way
+
 MSG=$1
 
 git add .
 git commit -m "$MSG"
 git push
-

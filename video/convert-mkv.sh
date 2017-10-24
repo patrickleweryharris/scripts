@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Convert mkv to mp4 format
+
 for i in *.mkv;
   do name=`echo $i | cut -d'.' -f1`;
   echo $name;
