@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Demote an old project or course to 'old'
+
+# Very specific to my file system
+
+# Usage: demote <code> <year> <semester>
+#        demote <name>
+
+TYPE=`pwd`
+FP=$1
+YEAR=$2'-year'
+SEM=$3'-semester'
+if [ "$TYPE" = "/Users/patrickharris/repos/courses" ]
+then
+  mkdir $TYPE/old/$YEAR
+  mkdir $TYPE/old/$YEAR/$SEM
+  mv $FP $TYPE/old/$YEAR/$SEM/$FP
+
+elif [ "$TYPE" = "/Users/patrickharris/repos/current" ]
+then
+  mv $FP /Users/patrickharris/repos/old/$FP
+fi

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Automate the process of creating a new script, and open the editor
+# so I can start making it
+
+NAME=$1
+
+touch $NAME
+
+echo '#!/bin/bash' > $NAME
+
+vim $NAME
