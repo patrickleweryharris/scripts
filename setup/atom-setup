@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PACKAGES="atom-beautify atom-clock atom-spotified file-icons busy-signal
+highlight-bad-chars highlight-selected language-latex linter linter-clang
+linter-csslint linter-javac linter-jshint linter-jsonlint linter-pycodestyle linter-tidy
+linter-ui-default minimap pigments ariake-dark-syntax genesis-ui"
+
+for i in $PACKAGES; do
+    apm install $i
+done
