@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# Commit to git, the lazy way
+# Commit to git or svn, the lazy way
 
 MSG=$1
-
-git add .
-git commit -m "$MSG"
-git push
+if [ "$MSG" = "-s" ] # Svn commit
+then
+    svn commit -m $2
+else # Git commit    
+    git add .
+    git commit -m "$MSG"
+    git push
+fi
