@@ -5,7 +5,7 @@
 MSG=$1
 if [ "$MSG" = "-s" ] # Svn commit
 then
-    svn commit -m $2
+    svn commit -m "$2"
 else # Git commit    
     git add .
     git commit -m "$MSG"
