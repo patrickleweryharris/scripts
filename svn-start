@@ -1,0 +1,3 @@
+#!/bin/bash
+
+svn co $1 --username harrisp5
