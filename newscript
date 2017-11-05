@@ -10,3 +10,6 @@ touch $NAME
 echo '#!/bin/bash' > $NAME
 
 vim $NAME
+
+# After editing, add permissions for script to execute
+chmod +x $NAME
