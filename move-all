@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for filename in *; do 
+    mv $filename $1/$filename
+done
