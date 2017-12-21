@@ -1,11 +1,11 @@
 #!/bin/bash
 
-cp -av /Users/patrickharris/.zshrc /Users/patrickharris/repos/current/dotfiles
+cp -av /Users/patrickharris/.zshrc /Users/patrickharris/important/dotfiles
 
 # Change the directory, commit to git, go back
 
 function myprog() {
-  cd /Users/patrickharris/repos/current/dotfiles
+  cd /Users/patrickharris/important/dotfiles
 	commit "Update zshrc"
 	cd -
 }
