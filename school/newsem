@@ -1,0 +1,20 @@
+#!/bin/bash
+# At the start of each semester, create new directories for each course and intialize git
+COURSES=$@
+
+# Jump into directory and initialize git
+function init(){
+    cd $1
+    git init
+}
+
+for i in $COURSES; do
+    CUR="/Users/patrickharris/repos/courses/$i"
+    mkdir $CUR
+    init $CUR
+    # Add a named directory to my rc file
+    echo "export $i=$CUR" >> /Users/patrickharris/.zshrc
+done
+
+rcupdate
+
