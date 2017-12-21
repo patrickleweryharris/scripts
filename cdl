@@ -1,0 +1,9 @@
+#!/bin/bash
+CUR=`pwd`
+# cd to a directory and then to ls
+function goto(){
+  cd $CUR/$1
+  ls
+  exec zsh
+}
+goto $1
