@@ -1,9 +1,10 @@
 #!/bin/bash
 CUR=`pwd`
-# cd to a directory and then to ls
+# cd to a directory and then do ls
 function goto(){
   cd $CUR/$1
   ls
+  # Keeps you in new directory when shell exits
   exec zsh
 }
 goto $1
