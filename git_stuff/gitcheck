@@ -4,12 +4,8 @@
 
 function goto(){ # Only search in the dir where I keep git repos
   cd /Users/patrickharris/repos
+  gitcheck.sh
 }
 goto
 
-gitcheck.sh
 
-function comeback(){
-  cd -
-}
-comeback
