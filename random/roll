@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+# Roll a die
+
+from random import randint
+
+if __name__ == '__main__':
+    print(randint(0, 6))

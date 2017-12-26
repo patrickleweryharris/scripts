@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+# Make a decision
+
+from random import randint
+
+if __name__ == '__main__':
+    i = randint(0, 1)
+    if i:
+        print("Yes")
+    else:
+        print("No")
