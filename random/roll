@@ -5,4 +5,4 @@
 from random import randint
 
 if __name__ == '__main__':
-    print(randint(0, 6))
+    print(randint(1, 6))
