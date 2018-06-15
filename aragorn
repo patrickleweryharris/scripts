@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if[ $1 = 'start']
+then
+    VBoxManage startvm "Ubuntu VM" 
+fi
+ssh patty@192.168.56.101
