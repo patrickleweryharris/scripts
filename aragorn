@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if[ $1 = 'start']
+if [ '$1' = 'start' ]
 then
     VBoxManage startvm "Ubuntu VM" 
 fi
