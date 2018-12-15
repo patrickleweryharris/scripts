@@ -38,6 +38,6 @@ do
 done
 
 # Report status and exit:
-echo -ne "\n\n${count_all} git repositories found: "
+echo -ne "${count_all} git repositories found: "
 echo -ne "${count_changed} have changes, "
-echo -ne "${count_unchanged} are unchanged.\n\n"
+echo -ne "${count_unchanged} are unchanged."
