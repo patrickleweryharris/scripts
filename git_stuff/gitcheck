@@ -1,11 +1,20 @@
 #!/bin/bash
+HOME=/Users/patrickharris
+SOURCES="$HOME/repos $HOME/important"
+SEP="======================================================================"
 
 # Command line wrapper for gitcheck.sh
-
-function goto(){ # Only search in the dir where I keep git repos
-  cd /Users/patrickharris/repos
-  gitcheck.sh
-}
-goto
+for DIR in $SOURCES
+do
+    echo $SEP
+    echo "Checking for unpushed repos in $DIR"
+    echo $SEP
+    echo ""
+    pushd $DIR > /dev/null
+    gitcheck.sh
+    echo ""
+    echo ""
+    popd > /dev/null
+done
 
 
