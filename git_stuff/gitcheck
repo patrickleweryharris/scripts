@@ -7,7 +7,7 @@ SEP="======================================================================"
 for DIR in $SOURCES
 do
     echo $SEP
-    echo "Checking for unpushed repos in $DIR"
+    echo "Checking for uncommited changes in $DIR"
     echo $SEP
     echo ""
     pushd $DIR > /dev/null
