@@ -1,5 +1,4 @@
 #!/bin/bash
-HOME=/Users/patrickharris
 SOURCES="$HOME/repos $HOME/important"
 SEP="======================================================================"
 

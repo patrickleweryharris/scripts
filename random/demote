@@ -11,13 +11,13 @@ TYPE=`pwd`
 FP=$1
 YEAR=$2'-year'
 SEM=$3'-semester'
-if [ "$TYPE" = "/Users/patrickharris/repos/courses" ]
+if [ "$TYPE" = "$HOME/repos/courses" ]
 then
   mkdir $TYPE/old/$YEAR
   mkdir $TYPE/old/$YEAR/$SEM
   mv $FP $TYPE/old/$YEAR/$SEM/$FP
 
-elif [ "$TYPE" = "/Users/patrickharris/repos/current" ]
+elif [ "$TYPE" = "$HOME/repos/current" ]
 then
-  mv $FP /Users/patrickharris/repos/old/$FP
+  mv $FP $HOME/repos/old/$FP
 fi

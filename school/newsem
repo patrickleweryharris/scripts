@@ -9,11 +9,11 @@ function init(){
 }
 
 for i in $COURSES; do
-    CUR="/Users/patrickharris/repos/courses/$i"
+    CUR="$HOME/repos/courses/$i"
     mkdir $CUR
     init $CUR
     # Add a named directory to my rc file
-    echo "export $i=$CUR" >> /Users/patrickharris/.zshrc
+    echo "export $i=$CUR" >> $HOME/.zshrc
 done
 
 rcupdate
