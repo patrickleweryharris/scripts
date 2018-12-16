@@ -7,6 +7,6 @@ if [[ $BADHOME = '' ]]
 then
     exit 0
 else
-    echo $BADHOME
+    echo $BADHOME >&2
     exit 1
 fi
