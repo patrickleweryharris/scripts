@@ -17,8 +17,8 @@ end tell
 
 tell application "Pages"
   activate
-	open _document
-	with timeout of 1200 seconds
+  open _document
+  with timeout of 1200 seconds
     export front document to file _location as PDF
   end timeout
 
