@@ -1,8 +1,6 @@
 language: bash
-python:
-    - 3.6
 install:
-    - pip install flake8
+    - pip install flake8 --user
 script:
     - bash test.sh
 
