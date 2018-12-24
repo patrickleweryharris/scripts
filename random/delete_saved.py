@@ -47,5 +47,6 @@ def main():
     args = parser.parse_args()
     run_praw(args.client_id, args.client_secret, args.password, args.username)
 
+
 if __name__ == "__main__":
     main()
