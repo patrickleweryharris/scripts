@@ -1,15 +1,24 @@
 #!/usr/bin/python
+"""
+Grab one item each from The Atlantic, Hacker News,
+and NYT, and save them to Todoist
+
+Saves to a specific project ID, and marks the date for today.
+API token is read from a specific folder
+"""
 import os
 import feedparser
 from todoist.api import TodoistAPI
 
+
 def get_token():
     token = ''
     home = os.getenv('HOME')
-    with open(home +'/Dropbox/important/todoist-api-token') as f:
+    with open(home + '/Dropbox/important/todoist-api-token') as f:
         token = f.read()
 
     return token
+
 
 # Adds the top item of feed located at url to Todoist
 def parse(urls):
@@ -21,7 +30,8 @@ def parse(urls):
         item = feed['entries'][0]
         title = item['title']
         link = item['links'][0]['href']
-        api.items.add('[' + title + '](' + link + ')', 2171697157, labels=[2149155667], date_string="today")
+        api.items.add('[' + title + '](' + link + ')', 2171697157,
+                      labels=[2149155667], date_string="today")
         # Use api.state['project'] or ['labels'] to get project or label ids
 
     api.commit()

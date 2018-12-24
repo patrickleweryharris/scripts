@@ -24,7 +24,7 @@ do
 done
 
 # Do the same for python
-flake8 .
+flake8 . --ignore=D
 CHECK=$?
 if [[ $CHECK -ne 0 ]]
 then

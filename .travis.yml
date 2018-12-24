@@ -1,6 +1,6 @@
 language: bash
 install:
-    - pip install flake8 --user
+    - pip install --user flake8
 script:
     - bash test.sh
 
