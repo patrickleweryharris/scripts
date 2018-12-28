@@ -42,7 +42,7 @@ def run(book):
 
 def check_name_matches(book):
     cut = book.split("/")[-1]
-    book_syntax = r"[A-Za-z]+, [A-Za-z\.]+[ A-Za-z\.]* - .*(\.epub)"
+    book_syntax = r"[A-Za-z ]+, [A-Za-z\.]+[ A-Za-z\.]* - .*(\.epub)"
     if not re.match(book_syntax, cut):
         raise argparse.ArgumentTypeError(
             "{} is an invalid file name".format(book))
