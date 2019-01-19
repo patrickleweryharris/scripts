@@ -1,0 +1,3 @@
+#!/bin/bash
+# Find and open in vim (if more than one file vim will open each in it's own buffer
+find . -iname "$1" -exec vi {} \;
