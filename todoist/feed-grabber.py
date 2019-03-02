@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 """
 Grab one item each from The Atlantic, Hacker News,
 and NYT, and save them to Todoist
@@ -6,35 +6,24 @@ and NYT, and save them to Todoist
 Saves to a specific project ID, and marks the date for today.
 API token is read from a specific folder
 """
-import os
 import feedparser
-from todoist.api import TodoistAPI
+import ssl
+import todoist_utils as utils
 
 
-def get_token():
-    token = ''
-    home = os.getenv('HOME')
-    with open(home + '/Dropbox/important/todoist-api-token') as f:
-        token = f.read()
-
-    return token
-
-
-# Adds the top item of feed located at url to Todoist
 def parse(urls):
-    token = get_token()
-    api = TodoistAPI(token)
-
+    """ Adds the top item of feed located at url to Todoist """
+    if hasattr(ssl, '_create_unverified_context'):
+        ssl._create_default_https_context = ssl._create_unverified_context
     for url in urls:
         feed = feedparser.parse(url)
         item = feed['entries'][0]
         title = item['title']
         link = item['links'][0]['href']
-        api.items.add('[' + title + '](' + link + ')', 2171697157,
-                      labels=[2149155667], date_string="today")
-        # Use api.state['project'] or ['labels'] to get project or label ids
-
-    api.commit()
+        utils.add_to_project('To Browse',
+                             '[' + title + '](' + link + ')',
+                             label='break',
+                             date='today')
 
 
 if __name__ == '__main__':
