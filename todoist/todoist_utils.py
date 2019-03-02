@@ -61,15 +61,20 @@ def add_to_project(project, name, label=False, date=False):
     token = get_token()
     api = TodoistAPI(token)
 
+    # Hazel will give a full path as the task name, which we don't want
+    basename = name
+    if os.path.exists(name):
+        basename = os.path.splitext(os.path.basename(name))[0]
+
     due_date = date
     if not date:
         due_date = 'next year'
     if label:
-        api.items.add(name, get_project_id(project),
+        api.items.add(basename, get_project_id(project),
                       labels=[get_label_id(label)],
                       date_string=due_date)
     else:
-        api.items.add(name, get_project_id(project),
+        api.items.add(basename, get_project_id(project),
                       date_string=due_date)
 
     api.commit()
