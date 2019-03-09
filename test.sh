@@ -9,6 +9,7 @@ if [[ $BADHOME = '' ]]
 then
     CODE=0
 else
+    echo "$HOMEDIR found in script files! Replace with ~"
     echo $BADHOME >&2
 fi
 
