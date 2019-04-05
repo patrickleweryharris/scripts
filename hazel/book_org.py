@@ -13,11 +13,11 @@ BOOK_PATH = os.getenv("HOME") + '/Dropbox/books'
 def create_parser():
     """ Create argparse object for this CLI """
     parser = argparse.ArgumentParser(
-        description="Process ebooks in these formats: " +
-                    "Last, First - title.epub; " +
-                    "(series name) Last, First - title.epub; " +
-                    "First Last - title.epub; " +
-                    "(series name) First Last - title.epub")
+        description=("Process ebooks in these formats: "
+                     "Last, First - title.epub; "
+                     "(series name) Last, First - title.epub; "
+                     "First Last - title.epub; "
+                     "(series name) First Last - title.epub"))
     parser.add_argument("book_name", metavar="BOOK", type=check_name_matches,
                         help="Epub file to process")
 
