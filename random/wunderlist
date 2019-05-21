@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Shell startup routine, show me my current tasks
-
-echo "Your Tasks:"
-
-wunderline all

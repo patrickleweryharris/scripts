@@ -1,12 +1,4 @@
 #!/bin/bash
-
-cp -av $HOME/.zshrc $HOME/important/dotfiles
-
-# Change the directory, commit to git, go back
-
-function myprog() {
-  cd $HOME/important/dotfiles
-	commit "Update zshrc"
-	cd -
-}
-myprog
+pushd $HOME/important/dotfiles
+commit "Update zshrc"
+popd

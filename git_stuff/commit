@@ -6,7 +6,12 @@ MSG=$1
 if [ "$MSG" = "-s" ] # Svn commit
 then
     svn commit -m "$2"
-else # Git commit    
+else # Git commit
+    if [[ $MSG == *":"* ]]; then
+        echo "Remove colons from commit message..."
+        exit 1
+    fi
+
     git add .
     git commit -m "$MSG"
     git push
