@@ -1,4 +1,4 @@
 #!/bin/bash
-pushd $HOME/important/dotfiles
+pushd $HOME/env/dotfiles
 commit "Update zshrc"
 popd

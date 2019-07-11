@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCES="$HOME/repos $HOME/important"
+SOURCES="$HOME/repos $HOME/env"
 SEP="======================================================================"
 
 # Command line wrapper for gitcheck.sh
