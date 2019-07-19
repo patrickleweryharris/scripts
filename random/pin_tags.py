@@ -29,12 +29,14 @@ def main(pb):
             parsed = "cloudflare"
 
         parsed = replace_stuff(parsed)
+        if parsed == "t":
+            parsed = "twitter"
 
         # This if doesn't need to be here, pinboard will filter
         if parsed not in tags:
-            print("==============================")
-            print("Bookmark: {}".format(bookmark))
-            print("Tag to add: {}".format(parsed))
+            print("=============================================")
+            print("Bookmark: {}".format(bookmark.description))
+            print("Tags to add: {}".format(parsed))
             print("Current tags: {}".format(tags))
             tags = [parsed] + tags
             if "utoronto" in parsed or "cs.toronto" in parsed:
@@ -42,7 +44,7 @@ def main(pb):
             bookmark.tags = tags
             print("New tags: {}".format(bookmark.tags))
             bookmark.save()
-            print("==============================")
+            print("=============================================")
 
 
 if __name__ == '__main__':
