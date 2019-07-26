@@ -7,4 +7,4 @@ Scripts that are used to automate my life
 - For use as part of embedded scripts within Hazel rules
 
 ## Todoist
-- Requires API token to be placed in ```$HOME/Dropbox/important/todoist-api-token```
+- Requires API token to be placed in $TODOIST_API_TOKEN

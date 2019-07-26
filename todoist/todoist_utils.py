@@ -27,11 +27,7 @@ def create_parser():
 
 def get_token():
     """ Return API token """
-    token = ''
-    home = os.getenv('HOME')
-    with open(home + '/Dropbox/important/todoist-api-token') as f:
-        token = f.read()
-
+    token = os.getenv('TODOIST_API_TOKEN')
     return token
 
 
