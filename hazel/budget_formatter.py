@@ -18,8 +18,8 @@ def create_parser():
 
 def process_file(filename):
     """ Turn the file into the correct format """
-    f = pd.read_csv(filename, usecols=['Merchant Name', 'Date', 'Amount'])
-    f = f[['Date', 'Merchant Name', 'Amount']]
+    f = pd.read_csv(filename, usecols=['Description', 'Date', 'Amount'])
+    f = f[['Date', 'Description', 'Amount']]
     f.to_csv(METRICS_PATH, index=False)
 
 
