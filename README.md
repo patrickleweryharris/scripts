@@ -8,3 +8,6 @@ Scripts that are used to automate my life
 
 ## Todoist
 - Requires API token to be placed in $TODOIST_API_TOKEN
+
+## Pinboard
+- Requires API token to be placed in $PINBOARD_API_TOKEN
