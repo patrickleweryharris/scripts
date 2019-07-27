@@ -6,7 +6,7 @@ pushd $HOME/repos/courses > /dev/null
 
 for i in $COURSES; do
     CUR="~courses/$i"
-    mkdir $i
+    mkdir -p $i
     pushd $i > /dev/null
     git init
     popd > /dev/null
