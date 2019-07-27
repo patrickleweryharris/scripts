@@ -66,7 +66,7 @@ def check_dir_exists(d):
     Check if a directory exists, and raise error if not
     """
     if not os.path.exists(d):
-        raise RuntimeError("{} does not exist!".format(d))
+        raise argparse.ArgumentTypeError("{} does not exist!".format(d))
     return d
 
 
