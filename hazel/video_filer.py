@@ -6,8 +6,9 @@ import argparse
 """
 video-filer.py
 
-Files TV shows in the format 'nameS#E#<garbage>.ext' into
-a directory show/nameS#E#.ext
+Files TV shows in the format in the format
+'$show$season$episode$garbage.$ext' to
+'$show/$show$season$episode.$ext'
 
 Works well with hazel: https://www.noodlesoft.com/
 """
