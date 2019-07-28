@@ -85,25 +85,18 @@ def auth(username):
     scope = "user-top-read playlist-modify-private"
     token = util.prompt_for_user_token(username, scope)
 
-    if token:
-        sp = spotipy.Spotify(auth=token)
-        return sp
-    else:
+    if not token:
         raise RuntimeError("Authorization failed")
-
+    sp = spotipy.Spotify(auth=token)
+    return sp
 
 def parse_tracks(tracks):
     """
     Filter out only the track id of
     return tracks
     """
-    ret = []
     tracks = tracks.get('items')
-    for item in tracks:
-        ret.append(item.get('uri'))
-
-    return ret
-
+    return [track.get('uri') for track in tracks]
 
 def main():
     parser = create_parser()
