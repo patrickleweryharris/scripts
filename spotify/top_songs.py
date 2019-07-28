@@ -90,6 +90,7 @@ def auth(username):
     sp = spotipy.Spotify(auth=token)
     return sp
 
+
 def parse_tracks(tracks):
     """
     Filter out only the track id of
@@ -97,6 +98,7 @@ def parse_tracks(tracks):
     """
     tracks = tracks.get('items')
     return [track.get('uri') for track in tracks]
+
 
 def main():
     parser = create_parser()
