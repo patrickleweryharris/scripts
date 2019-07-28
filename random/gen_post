@@ -1,0 +1,17 @@
+#!/bin/bash
+# Creates a new Jekyll post
+pushd _posts >> /dev/null
+FILE="$1.md"
+touch $FILE
+echo "---" >> $FILE
+echo "type: posts" >> $FILE
+echo "title: $1" >> $FILE
+DATE=`date +%Y-%m-%d`
+echo "date: $DATE" >> $FILE
+echo "categories: " >> $FILE
+echo "summary: " >> $FILE
+echo "image: " >> $FILE
+echo "---" >> $FILE
+echo "" >> $FILE
+echo "<!--more-->" >> $FILE
+popd >> /dev/null

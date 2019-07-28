@@ -1,6 +1,8 @@
 """
 Delete all saved posts / comments on your reddit account with PRAW.
 
+See: https://plh.io/automation/delete-all-saved-reddit-links
+
 Needs Python 3+ and Praw 5.3.0
 """
 import argparse
