@@ -9,7 +9,6 @@ tell application "Finder" to set attachmentsFolder to ((path to home folder as t
 
 tell application "Mail"
     set theMessages to the selected messages of the front message viewer
-    --set theMessage to first item of theMessages
 
     repeat with eachMessage in theMessages
         set theAddress to extract address from sender of eachMessage
