@@ -15,7 +15,8 @@ Works well with hazel: https://www.noodlesoft.com/
 
 DEFAULT_DEST = os.getenv("HOME") + "/movies"
 
-SHOW_SYNTAX = r"([\( A-za-z0-9\.\)]*)([Ss]{1}[0-9]+[Ee]{1}[0-9]+).*(\.[a-z]*)"
+SHOW_SYNTAX = (r"([\( A-za-z0-9\.\)]*)" +
+               r"([Ss]{1}[0-9]+[Ee]{1}[0-9]+).*(\.[a-z0-9]*)")
 
 
 def create_parser():
