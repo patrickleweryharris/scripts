@@ -9,4 +9,5 @@
     - id: trailing-whitespace
     - id: check-yaml
     - id: flake8
+    - id: detect-private-key
     # -   id: ...
