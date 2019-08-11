@@ -82,6 +82,7 @@ if __name__ == '__main__':
     match = re.match(SHOW_SYNTAX, end_file)
     show = match.group(1)
     show = show.replace(".", "").lower()
+    show = show.strip()
 
     epnum = match.group(2)
     epnum = epnum.replace(".", "").upper()
