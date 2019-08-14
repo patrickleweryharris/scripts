@@ -66,11 +66,11 @@ def add_to_project(project, name, label=False, date=False):
     if not date:
         due_date = 'next year'
     if label:
-        api.items.add(basename, get_project_id(project),
+        api.items.add(basename, project_id=get_project_id(project),
                       labels=[get_label_id(label)],
                       date_string=due_date)
     else:
-        api.items.add(basename, get_project_id(project),
+        api.items.add(basename, project_id=get_project_id(project),
                       date_string=due_date)
 
     api.commit()
