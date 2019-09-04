@@ -2,7 +2,7 @@
 # Find instances of home dir in literal form and flag them
 # Need to seperate HOMEDIR out so this script doesn't get flagged
 HOMEDIR='/Users'
-HOMEDIR+='/patrickharris'
+HOMEDIR+='/patrick'
 BADHOME=`grep -rn $HOMEDIR *`
 CODE=1
 if [[ $BADHOME = '' ]]
