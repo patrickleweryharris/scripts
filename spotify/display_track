@@ -1,0 +1,8 @@
+#!/bin/bash
+clear
+while :
+    do
+        osascript display_track.applescript
+        sleep 5
+        clear
+    done
