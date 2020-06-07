@@ -13,11 +13,11 @@ YEAR=$2'-year'
 SEM=$3'-semester'
 if [[ "$TYPE" =~ "courses" ]]
 then
-  DIR=$HOME/projects/courses/archive/$YEAR/$SEM
+  DIR=$HOME/workspace/courses/archive/$YEAR/$SEM
   mkdir -p $DIR
   mv $FP $DIR/$FP
 
 elif [[ "$TYPE" =~ "current" ]]
 then
-  mv $FP $HOME/projects/archive/$FP
+  mv $FP $HOME/workspace/archive/$FP
 fi
