@@ -20,7 +20,7 @@ def process_file(filename):
     """ Turn the file into the correct format """
     f = pd.read_csv(filename, usecols=['Description', 'Date', 'Amount'])
     f = f[['Date', 'Description', 'Amount']]
-    f['Amount'] = f['Amount'].apply(lambda x: x*-1)
+    f['Amount'] = f['Amount'].apply(lambda x: x * -1)
     f.to_csv(METRICS_PATH, index=False)
 
 
