@@ -7,7 +7,7 @@ import argparse
 Script used to organize my epub books.
 Books are expected to be placed in $HOME/Dropbox/books
 """
-BOOK_PATH = os.getenv("HOME") + '/Dropbox/books'
+BOOK_PATH = os.getenv("HOME") + '/Library/Mobile Documents/com~apple~CloudDocs/src/books'
 
 
 def create_parser():
