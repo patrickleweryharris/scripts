@@ -3,7 +3,7 @@ import os
 import argparse
 import pandas as pd
 
-METRICS_PATH = os.getenv("HOME") + '/Dropbox/metrics/to_process/parsed.csv'
+METRICS_PATH = os.getenv("HOME") + '/Desktop/parsed.csv'
 
 
 def create_parser():
