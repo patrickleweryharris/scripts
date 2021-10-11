@@ -20,10 +20,9 @@ create a Spotify API app, and save the information in
 environment variables.
 See: https://spotipy.readthedocs.io/en/latest/#authorized-requests
 
-When you run this for the first time, a URL will be printed. Open
-this URL in your browser to authorize the app. You will
-be redirected to a 'localhost://" URL. Copy the full
-URL and paste it to the console to finish authorization.
+When you run this for the first time, a spotify OAuth webpage will
+open. Authorize the app, then the window should automatically close.
+The playlist is then generated.
 """
 
 # Number of recently played songs to go through
@@ -83,7 +82,7 @@ def auth(username):
     Authenticate with Spotify
     """
     scope = "user-top-read playlist-modify-private"
-    token = util.prompt_for_user_token(username, scope)
+    token = util.prompt_for_user_token(username, scope, redirect_uri='http://localhost:8080/callback/')
 
     if not token:
         raise RuntimeError("Authorization failed")
