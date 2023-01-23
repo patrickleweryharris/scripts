@@ -1,4 +1,4 @@
-spotipy==2.4.4
+spotipy==2.22.1
 pandas==0.25.0
 todoist-python==8.0.0
 praw==6.0.0
